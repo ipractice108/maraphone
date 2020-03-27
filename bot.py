@@ -2,6 +2,7 @@ import logging
 import telebot
 import constants
 import pbd
+pdb.set_trace()
 
 import schedule
 import time
