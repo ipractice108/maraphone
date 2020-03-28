@@ -1,7 +1,5 @@
 import os
 import constants
-import pdb
-pdb.set_trace()
 
 from bot import bot
 from telebot import types
