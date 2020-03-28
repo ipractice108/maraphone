@@ -5,9 +5,7 @@ import constants
 import schedule
 import time
 
-from telegram import InlineKeyboardButton
-from telegram import InlineKeyboardMarkup
-from telebot import types
+
 
 bot = telebot.TeleBot(constants.token)
 logger = telebot.logger
