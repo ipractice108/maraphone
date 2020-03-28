@@ -1,8 +1,6 @@
 import logging
 import telebot
 import constants
-import pbd
-pdb.set_trace()
 
 import schedule
 import time
@@ -27,6 +25,7 @@ def log(message, answer):
                                                                str(message.from_user.id),
                                                                message.text))
     print(answer)
+
 #расписание сообщений
 
 @bot.message_handler(content_types=['text', 'video', 'url'])
