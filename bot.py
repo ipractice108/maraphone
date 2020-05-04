@@ -3,7 +3,7 @@ import telebot
 import constants
 
 import schedule
-
+from MON_SCHEDULE import mon_schedule
 
 
 
@@ -26,8 +26,12 @@ def log(message, answer):
                                                                message.text))
     print(answer)
 
-
 #расписание сообщений
+
+scheduler_process1 = mon_schedule()
+scheduler_process1.start()
+
+
 
 @bot.message_handler(content_types=['text', 'video', 'url'])
 

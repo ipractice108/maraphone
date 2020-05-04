@@ -75,3 +75,5 @@ def job_sat12():
                 schedule.every(1).saturday.at("20:00").do(job_sat8)
                 schedule.every(1).saturday.at("22:50").do(job_sat9)
                 schedule.every(1).minute.do(job_sat10)
+
+schedule.run_pending()
