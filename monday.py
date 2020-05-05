@@ -1,4 +1,5 @@
-import bot
+from bot import bot
+
 
 #MONDAY
 #wake up
@@ -47,9 +48,6 @@ def job_mon8():
 
 def job_mon9():
     bot.send_message(message.chat.id, 'Кирюха мозг')
+    print('Hahaha')
 #-------------------------------------------------------------------------------------------------------------------------
 # MONDAY SCHEDULE
-
-
-    while true:
-            schedule.run_pending()

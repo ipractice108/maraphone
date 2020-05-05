@@ -1,20 +1,16 @@
 import logging
 import telebot
 import constants
+import telebot
+from telebot import apihelper
 
-import schedule
-from MON_SCHEDULE import mon_schedule
-
-
-
+#apihelper.proxy = {'https':'https://51.158.68.68:8811'}
 bot = telebot.TeleBot(constants.token)
 logger = telebot.logger
 telebot.logger.setLevel(logging.DEBUG)
 
 
-
 print(bot.get_me())
-
 
 def log(message, answer):
     print("\n -----")
@@ -26,15 +22,9 @@ def log(message, answer):
                                                                message.text))
     print(answer)
 
-#расписание сообщений
-
-scheduler_process1 = mon_schedule()
-scheduler_process1.start()
-
 
 
 @bot.message_handler(content_types=['text', 'video', 'url'])
-
 def handle_text(message):
     print("message text is: " + message.text)
 
@@ -147,9 +137,6 @@ def handle_text(message):
 
 
 
-while True:
-    schedule.run_pending()
+  
 
-    if __name__ == '__main__':
-        bot.polling(none_stop=True)
 
