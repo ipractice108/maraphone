@@ -3,12 +3,14 @@ import telebot
 import constants
 import telebot
 from telebot import apihelper
+from db import Database
 
-#apihelper.proxy = {'https':'https://51.158.68.68:8811'}
+apihelper.proxy = {'https':'https://51.158.68.68:8811'}
 bot = telebot.TeleBot(constants.token)
 logger = telebot.logger
 telebot.logger.setLevel(logging.DEBUG)
 
+database = Database(constants.bot_database)
 
 print(bot.get_me())
 
@@ -27,6 +29,8 @@ def log(message, answer):
 @bot.message_handler(content_types=['text', 'video', 'url'])
 def handle_text(message):
     print("message text is: " + message.text)
+
+    database.add_chat(message.chat)
 
     if message.text == "/start":
         key = telebot.types.ReplyKeyboardMarkup(True, False)
@@ -135,7 +139,8 @@ def handle_text(message):
         key.row('ВПЕРЕД!')
         bot.send_message(message.chat.id,'❗️Пожалуйста, помните следовать советам и заниматься по видео урокам необходимо в соответсвии со своими ощущениями, без чрезмерных усилий, желательно в пол силы.❗️', reply_markup=key)
 
-
+    elif message.text == 'ВПЕРЕД!':
+      database.update_assign_shedule(message.chat.id)
 
   
 

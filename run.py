@@ -5,7 +5,7 @@ from bot import bot
 from telebot import types
 from flask import Flask, request
 
-from MON_SCHEDULE import mon_schedule
+from MON_SCHEDULE import run_schedule
 from multiprocessing import Process
 server = Flask(__name__)
 
@@ -38,7 +38,7 @@ if __name__ == "__main__":
         print(server_process)
 
         print("starting schedule")
-        scheduler_process1 = Process(target=mon_schedule)
+        scheduler_process1 = Process(target=run_schedule)
         scheduler_process1.start()
         print(scheduler_process1)
 
