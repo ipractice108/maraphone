@@ -48,4 +48,3 @@ class Database():
 			chats = cur.fetchall()
 
 			return [dict(zip(columns, chat)) for chat in chats]
-

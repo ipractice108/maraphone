@@ -5,7 +5,9 @@ from bot import bot
 from telebot import types
 from flask import Flask, request
 
+
 from MON_SCHEDULE import run_schedule
+
 from multiprocessing import Process
 server = Flask(__name__)
 
@@ -44,6 +46,7 @@ if __name__ == "__main__":
 
         bot.polling(none_stop=True)      
 
+
     finally:
         if server_process:
             server_process.terminate()
@@ -52,4 +55,3 @@ if __name__ == "__main__":
         if scheduler_process1:
             scheduler_process1.terminate()
             scheduler_process1.join()
-
