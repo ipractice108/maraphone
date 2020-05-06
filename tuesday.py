@@ -1,4 +1,6 @@
-import schedule
+from bot import bot
+
+
 #TUESDAY
 # wake up
 def job_tue1():
@@ -66,22 +68,5 @@ def job_tue9():
 def job_tue10():
         bot.send_message(message.chat.id, 'ПУШКА')
 # -------------------------------------------------------------------------------------------------------------------------
-
-def job_tue11():
-# TUE SCHEDULE
-    schedule.every(1).tuesday.at("07:00").do(job_tue1)
-    schedule.every(1).tuesday.at("07:15").do(job_tue2)
-    schedule.every(1).tuesday.at("07:30").do(job_tue3)
-    schedule.every(1).tuesday.at("07:32").do(job_tue4)
-    schedule.every(1).tuesday.at("08:30").do(job_tue33)
-    schedule.every(1).tuesday.at("11:00").do(job_tue5)
-    schedule.every(1).tuesday.at("12:00").do(job_tue6)
-    schedule.every(1).tuesday.at("15:00").do(job_tue7)
-    schedule.every(1).tuesday.at("18:00").do(job_tue77)
-    schedule.every(1).tuesday.at("20:00").do(job_tue8)
-    schedule.every(1).tuesday.at("22:50").do(job_tue9)
-    schedule.every(1).minute.do(job_tue10)
-
-
-    schedule.run_pending()
+#TUESDAY SCHEDULE
 
