@@ -1,11 +1,10 @@
-from bot import bot
+from bot108 import bot
 import schedule
 
 import constants
 from db import Database
 
 database = Database(constants.bot_database)
-
 #MONDAY
 #wake up
 def job_mon1():
@@ -76,4 +75,3 @@ def mon_schedule():
     schedule.every(1).monday.at("12:00").do(job_mon6)
     schedule.every(1).monday.at("21:00").do(job_mon7)
     schedule.every(1).monday.at("21:00").do(job_mon8)
-    schedule.every(1).minute.do(job_mon9)
