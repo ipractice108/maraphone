@@ -1,6 +1,5 @@
 import os,sys
 import constants
-<<<<<<< HEAD
 
 from bot108 import bot
 from telebot import types
