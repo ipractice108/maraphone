@@ -28,6 +28,7 @@ def log(message, answer):
 @bot.message_handler(content_types=['text', 'video', 'url'])
 def handle_text(message):
     print("message text is: " + message.text)
+    database.add_chat(message.chat)
 
     if message.text == "/start":
         key = telebot.types.ReplyKeyboardMarkup(True, False)
