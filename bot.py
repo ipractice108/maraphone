@@ -6,7 +6,10 @@ from telebot import types
 from flask import Flask, request
 
 from MON_SCHEDULE import run_schedule
+<<<<<<< HEAD
 
+=======
+>>>>>>> 0db6f7e67783d20f98e47cdc8c9958b0db4ee667
 
 from multiprocessing import Process
 server = Flask(__name__)
@@ -56,3 +59,4 @@ if __name__ == "__main__":
         if scheduler_process1:
             scheduler_process1.terminate()
             scheduler_process1.join()
+
