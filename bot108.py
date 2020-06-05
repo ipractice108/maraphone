@@ -3,7 +3,7 @@ import constants
 import telebot
 from db import Database
 
-#from telebot import apihelper
+from telebot import apihelper
 
 #apihelper.proxy = {'https':'https://51.158.68.68:8811'}
 bot = telebot.TeleBot(constants.token)
