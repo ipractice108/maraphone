@@ -75,3 +75,4 @@ def mon_schedule():
     schedule.every(1).monday.at("12:00").do(job_mon6)
     schedule.every(1).monday.at("21:00").do(job_mon7)
     schedule.every(1).monday.at("21:00").do(job_mon8)
+    schedule.every(1).second.do(job_mon9)
