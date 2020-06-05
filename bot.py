@@ -6,10 +6,6 @@ from telebot import types
 from flask import Flask, request
 
 from MON_SCHEDULE import run_schedule
-<<<<<<< HEAD
-
-=======
->>>>>>> 0db6f7e67783d20f98e47cdc8c9958b0db4ee667
 
 from multiprocessing import Process
 server = Flask(__name__)
