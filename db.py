@@ -28,7 +28,7 @@ class Database():
 		today = dt.now().strftime('%Y-%m-%d')
 		with sqlite3.connect(self.db_path) as con:
 			cur = con.cursor()
-			cur.execute('INSERT OR IGNORE INTO Chats(id, first_name, last_name, username, date_added) VALUES(?,?,?,?,?)',
+			cur.execute('INSERT OR IGNORE INTO Chats(id, first_name, last_name, username, date_added) VALUES(?,?,?,?,?)', 
 				        (newchat.id, newchat.first_name, newchat.last_name, newchat.username, today))
 			con.commit()
 
