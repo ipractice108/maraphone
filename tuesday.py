@@ -36,7 +36,7 @@ def job_tue33():
 
 def job_tue4():
     for assigned_chat in database.get_chats_for_schedule():
-        bot.send_message(assigned_chat['id'], 'Утренний самомассаж стоя + разминка стоя')
+        bot.send_message(assigned_chat['id'], 'https://youtu.be/EAxW2ivMkpw')
         bot.send_message(assigned_chat['id'], '🕙В 10.00 ты получишь нопоминание о режиме питания + рецепт завтрака')
 
         # warm up + food notice
@@ -106,7 +106,7 @@ def job_tue77():
 
 def job_tue8():
     for assigned_chat in database.get_chats_for_schedule():
-        bot.send_message(assigned_chat['id'], 'РАЗМИНКА СТОЯ + АСАНЫ ЛЕЖА', '\n'
+        bot.send_message(assigned_chat['id'], 'https://youtu.be/FsLWLBmdlXk', '\n'
                                                                          '\n'
                                                                          '🙆🙆‍♂выполняйте практику в спокойном темпе, за полчаса перед сном.' '\n'
                                                                          '\n'

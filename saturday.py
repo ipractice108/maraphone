@@ -34,7 +34,7 @@ def job_sat33():
 # warm up + food notice
 def job_sat4():
     for assigned_chat in database.get_chats_for_schedule():
-        bot.send_message(assigned_chat['id'], 'https://youtu.be/2j3MsZ4E6iQ - Утренний самомассаж сидя + дыхательные упражнения + утренняя медитация на ощущениях и на здоровье и успех в каждом дне.')
+        bot.send_message(assigned_chat['id'], 'https://youtu.be/Mm82ICloc5g')
         bot.send_message(assigned_chat['id'], '🕙В 10.00 ты получишь нопоминание о режиме питания + полезные свойства фруктов')
 
 # warm up + food notice
@@ -66,7 +66,7 @@ def job_sat7():
 
 def job_sat8():
     for assigned_chat in database.get_chats_for_schedule():
-        bot.send_message(assigned_chat['id'], 'http://youtu.be/8EgiMc5iwGg', 'дыхание + медитация на закрепление.' '\n'
+        bot.send_message(assigned_chat['id'], 'https://youtu.be/TfNcavIYWUA' '\n'
                                                                                      '\n'
                                                                                      '🙆🙆‍♂выполняйте практику в спокойном темпе, за полчаса перед сном.' '\n'
                                                                                      '\n'

@@ -35,7 +35,7 @@ def job_sun33():
 # warm up + food notice
 def job_sun4():
     for assigned_chat in database.get_chats_for_schedule():
-        bot.send_message(assigned_chat['id'], 'https://youtu.be/2j3MsZ4E6iQ - Видео - разминка + сурья намаскар про.')
+        bot.send_message(assigned_chat['id'], 'https://youtu.be/vIpOIkQq704')
         bot.send_message(assigned_chat['id'], '🕙В 10.00 вы получите нопоминание о режиме "голодания" + полезные активности, для отвлечения ума от еды.')
 
 # warm up + food notice
@@ -99,7 +99,7 @@ def job_sun7():
 
 def job_sun8():
     for assigned_chat in database.get_chats_for_schedule():
-        bot.send_message(assigned_chat['id'], 'разминка сидя + асаны сидя + асаны лежа + полноценная ШАВАСАНА' , '\n'
+        bot.send_message(assigned_chat['id'], 'https://youtu.be/vIpOIkQq704' , '\n'
                                                                                  '\n'
                                                                                  '🙆🙆‍♂выполняйте практику в спокойном темпе, за полчаса перед сном.' '\n'
                                                                                  '\n'

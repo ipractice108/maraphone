@@ -33,7 +33,7 @@ def job_thu33():
 
 # warm up + food notice
 def job_thu4():
-        bot.send_message(assigned_chat['id'], 'https://youtu.be/2j3MsZ4E6iQ')
+        bot.send_message(assigned_chat['id'], 'https://youtu.be/OAec_-tjRy0')
         bot.send_message(assigned_chat['id'], '🕙В 10.00 ты полчишь нопоминание о режиме питания + полезные свойства фруктов')
 
 # warm up + food notice
@@ -107,7 +107,7 @@ def job_thu7():
 
 def job_thu8():
     for assigned_chat in database.get_chats_for_schedule():
-        bot.send_message(assigned_chat['id'], 'легкая разминка, маха мудра, трианг муха, поза стола с поднятыми ногами, поза голубя, захват за две ноги, компенсация лежа, шавасана\n'
+        bot.send_message(assigned_chat['id'], 'https://youtu.be/6LR47bx4UB4\n'
                                                                              '\n'
                                                                              '🙆🙆‍♂выполняйте практику в спокойном темпе, за полчаса перед сном.' '\n'
                                                                              '\n'

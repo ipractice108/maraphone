@@ -31,7 +31,7 @@ def job_wed33():
 # warm up + food notice
 def job_wed4():
     for assigned_chat in database.get_chats_for_schedule():
-        bot.send_message(assigned_chat['id'], 'САМОМАССАЖ + РАЗМИНКА + ЛЕГКАЯ СУРЬЯ')
+        bot.send_message(assigned_chat['id'], 'https://youtu.be/zVOPQXP587c')
         bot.send_message(assigned_chat['id'], '🕙В 10.00 ты получишь нопоминание о режиме питания + рецепт завтрака')
 
 # warm up + food notice
@@ -70,7 +70,7 @@ def job_wed7():
 
 def job_wed8():
     for assigned_chat in database.get_chats_for_schedule():
-        bot.send_message(assigned_chat['id'], 'легкая разминка + триконасана, париврита паршваквнасана, пашчиматанасана, поза стола, расслабление лежа\n'
+        bot.send_message(assigned_chat['id'], 'https://youtu.be/R68HosozdtA\n'
                                                                              '\n'
                                                                              '🙆🙆‍♂выполняйте практику в спокойном темпе, за полчаса перед сном.' '\n'
                                                                              '\n'
