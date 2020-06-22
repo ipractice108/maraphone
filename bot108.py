@@ -135,7 +135,7 @@ def handle_text(message):
 
         key = telebot.types.ReplyKeyboardMarkup(True, False)
         key.row('ВПЕРЕД!')
-        bot.send_message(message.chat.id,'❗️Пожалуйста, помните следовать советам и заниматься по видео урокам необходимо в соответсвии со своими ощущениями, без чрезмерных усилий, желательно в пол силы.❗️', reply_markup=key)
+        bot.send_message(message.chat.id,'❗️Пожалуйста, помните! Cледовать советам и заниматься по видео урокам необходимо в соответсвии со своими ощущениями, без чрезмерных усилий, желательно в пол силы.❗️', reply_markup=key)
 
     elif message.text == 'ВПЕРЕД!':
         database.update_assign_shedule(message.chat.id)
