@@ -80,7 +80,7 @@ def job_sat9():
 
 # SATURDAY SCHEDULE
 
-def sat_schedule
+def sat_schedule():
         schedule.every(1).saturday.at("07:50").do(job_sat1)
         schedule.every(1).saturday.at("08:15").do(job_sat2)
         schedule.every(1).saturday.at("08:30").do(job_sat3)

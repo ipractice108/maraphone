@@ -109,10 +109,9 @@ def job_sun8():
 def job_sun9():
     for assigned_chat in database.get_chats_for_schedule():
         bot.send_message(assigned_chat['id'], '🙋🏽‍♂Доброй ночи, надеюсь Вам понравилось! Теперь вы готовы к регулярным online занятиям "ipractica.club!" и групповым занятям в классе')
-------------------------------------------------------------------------------------------------------------------------------
+#------------------------------------------------------------------------------------------------------------------------------
 # SUNDAY SCHEDULE
 def sun_schedule():
-        schedule.every(1).minute.do(job_sun10)
         schedule.every(1).sunday.at("08:00").do(job_sun1)
         schedule.every(1).sunday.at("08:30").do(job_sun2)
         schedule.every(1).sunday.at("09:30").do(job_sun3)
