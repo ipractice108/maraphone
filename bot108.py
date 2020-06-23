@@ -3,7 +3,7 @@ import constants
 import telebot
 from db import Database
 
-from telebot import apihelper
+#from telebot import apihelper
 
 bot = telebot.TeleBot(constants.token)
 logger = telebot.logger
@@ -137,5 +137,9 @@ def handle_text(message):
         key.row('ВПЕРЕД!')
         bot.send_message(message.chat.id,'❗️Пожалуйста, помните! Cледовать советам и заниматься по видео урокам необходимо в соответсвии со своими ощущениями, без чрезмерных усилий, желательно в пол силы.❗️', reply_markup=key)
 
+
     elif message.text == 'ВПЕРЕД!':
+        hide_markup = telebot.types.ReplyKeyboardRemove()
+        bot.send_message(message.chat.id,'Рад Вас видеть', reply_markup=hide_markup)
         database.update_assign_shedule(message.chat.id)
+

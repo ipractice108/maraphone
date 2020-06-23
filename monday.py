@@ -110,5 +110,5 @@ def mon_schedule():
     schedule.every(1).monday.at("07:32").do(job_mon4)
     schedule.every(1).monday.at("10:00").do(job_mon5)
     schedule.every(1).monday.at("12:00").do(job_mon6)
-    schedule.every(1).monday.at("21:00").do(job_mon7)
+    schedule.every(1).monday.at("20:00").do(job_mon7)
     schedule.every(1).monday.at("21:00").do(job_mon8)
