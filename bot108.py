@@ -143,3 +143,4 @@ def handle_text(message):
         bot.send_message(message.chat.id,'Рад Вас видеть', reply_markup=hide_markup)
         database.update_assign_shedule(message.chat.id)
 
+
