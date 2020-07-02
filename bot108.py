@@ -2,8 +2,9 @@ import logging
 import constants
 import telebot
 from db import Database
+import re
+from timezone_info import possible_timezones, time_delta_seconds
 
-#from telebot import apihelper
 
 bot = telebot.TeleBot(constants.token)
 logger = telebot.logger
@@ -28,7 +29,7 @@ def log(message, answer):
 @bot.message_handler(content_types=['text', 'video', 'url'])
 def handle_text(message):
     print("message text is: " + message.text)
-    database.add_chat(message.chat)
+    database.add_chat(message.chat, 'UTC')
 
     if message.text == "/start":
         key = telebot.types.ReplyKeyboardMarkup(True, False)
@@ -139,8 +140,20 @@ def handle_text(message):
 
 
     elif message.text == 'ВПЕРЕД!':
+        bot.send_message(message.chat.id,'Для получения уведомлений, пожалуйста, укажите ваше локальное время (от 00:00 до 23:59)')
+
+    elif re.match('\d\d:\d\d', message.text.strip()):
+        
         hide_markup = telebot.types.ReplyKeyboardRemove()
-        bot.send_message(message.chat.id,'Рад Вас видеть', reply_markup=hide_markup)
-        database.update_assign_shedule(message.chat.id)
+
+        user_timezone = possible_timezones(time_delta_seconds(message.text.strip(), '%H:%M'))
+        if user_timezone is not None:
+  
+          bot.send_message(message.chat.id,'Ваша временная зона сохраненаю. Спасибо.', reply_markup=hide_markup)
+          database.update_assign_shedule(message.chat.id, user_timezone)
+
+        else:
+          bot.send_message(message.chat.id,'Не получилось определить вашу временную зону. Попробуйте ввести время еще раз', reply_markup=hide_markup)
+
 
 
