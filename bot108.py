@@ -149,7 +149,7 @@ def handle_text(message):
         user_timezone = possible_timezones(time_delta_seconds(message.text.strip(), '%H:%M'))
         if user_timezone is not None:
   
-          bot.send_message(message.chat.id,'Ваша временная зона сохраненаю. Спасибо.', reply_markup=hide_markup)
+          bot.send_message(message.chat.id,'Ваша временная зона сохранена. Спасибо.', reply_markup=hide_markup)
           database.update_assign_shedule(message.chat.id, user_timezone)
 
         else:
