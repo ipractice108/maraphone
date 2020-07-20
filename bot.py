@@ -11,18 +11,18 @@ from multiprocessing import Process
 server = Flask(__name__)
 
 
-@server.route('/' + constants.token, methods=['POST'])
-def get_message():
-    bot.process_new_updates([types.Update.de_json(
-        request.stream.read().decode("utf-8"))])
-    return "!", 200
+#@server.route('/' + constants.token, methods=['POST'])
+#def get_message():
+#    bot.process_new_updates([types.Update.de_json(
+#        request.stream.read().decode("utf-8"))])
+#    return "!", 200
 
 
-@server.route('/', methods=['GET'])
-def webhook():
-    bot.remove_webhook()
-    bot.set_webhook(url=constants.heroku_url + constants.token)
-    return "Hello from Heroku!", 200
+#@server.route('/', methods=['GET'])
+#def webhook():
+#    bot.remove_webhook()
+#    bot.set_webhook(url=constants.heroku_url + constants.token)
+#    return "Hello from Heroku!", 200
 
 
 def run_server():
@@ -34,10 +34,10 @@ if __name__ == "__main__":
     scheduler_process1 = None
 
     try:
-        print("starting server")
-        server_process = Process(target=run_server)
-        server_process.start()
-        print(server_process)
+        #print("starting server")
+        #server_process = Process(target=run_server)
+        #server_process.start()
+        #print(server_process)
 
         print("starting schedule")
         scheduler_process1 = Process(target=run_schedule)
