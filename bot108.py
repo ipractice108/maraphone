@@ -8,7 +8,9 @@ from timezone_info import possible_timezones, time_delta_seconds
 
 bot = telebot.TeleBot(constants.token)
 logger = telebot.logger
+logging.basicConfig(filename = "LOG.log")
 telebot.logger.setLevel(logging.DEBUG)
+
 
 database = Database(constants.bot_database)
 
