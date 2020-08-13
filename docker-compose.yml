@@ -1,0 +1,11 @@
+# docker-compose.ymlversion: '3'
+version: '3'
+services:  
+
+  maraphone:
+    image: maraphone-bot
+    build:
+      context: .
+      dockerfile: Dockerfile-maraphone
+    volumes:
+      - "./:/app" 

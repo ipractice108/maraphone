@@ -1,14 +1,20 @@
 import os,sys
 import constants
+import logging
 
 from bot108 import bot
-from telebot import types
-from flask import Flask, request
+import telebot
+
+#from telebot import types
+#from flask import Flask, request
 
 from MON_SCHEDULE import run_schedule
 
 from multiprocessing import Process
-server = Flask(__name__)
+logger = telebot.logger
+#logging.basicConfig(filename = "bot.log")
+
+#server = Flask(__name__)
 
 
 #@server.route('/' + constants.token, methods=['POST'])
@@ -25,8 +31,8 @@ server = Flask(__name__)
 #    return "Hello from Heroku!", 200
 
 
-def run_server():
-    server.run(host="0.0.0.0", port=int(os.environ.get('PORT', 5000)))
+#def run_server():
+#    server.run(host="0.0.0.0", port=int(os.environ.get('PORT', 5000)))
 
 
 if __name__ == "__main__":
@@ -40,6 +46,7 @@ if __name__ == "__main__":
         #print(server_process)
 
         print("starting schedule")
+        logger.info('schedule')
         scheduler_process1 = Process(target=run_schedule)
         scheduler_process1.start()
         print(scheduler_process1)

@@ -8,8 +8,8 @@ from timezone_info import possible_timezones, time_delta_seconds
 
 bot = telebot.TeleBot(constants.token)
 logger = telebot.logger
-logging.basicConfig(filename = "LOG.log")
-telebot.logger.setLevel(logging.DEBUG)
+logging.basicConfig(filename = "bot108.log")
+telebot.logger.setLevel(logging.ERROR)
 
 
 database = Database(constants.bot_database)
@@ -155,7 +155,7 @@ def handle_text(message):
           database.update_assign_shedule(message.chat.id, user_timezone)
 
         else:
-          bot.send_message(message.chat.id,'Не получилось определить вашу временную зону. Попробуйте ввести время еще раз', reply_markup=hide_markup)
+          bot.send_message(message.chat.id,'Не получилось определить вашу временную зону. Попробуйте ввести время еще раз (формате от 00:00 до 23:59)', reply_markup=hide_markup)
 
 
 
