@@ -9,7 +9,10 @@ def time_delta_seconds(str_time, fmt):
     now = datetime.utcnow()
     now_time = timedelta(hours=now.hour, minutes=now.minute)
 
-    return (user_time - now_time).total_seconds()
+    user_time_diff = (user_time - now_time).total_seconds() % 86400
+    if user_time_diff > 43200:
+        user_time_diff = (now_time-user_time).total_seconds() % 86400
+    return user_time_diff
 
 
 def possible_timezones(tz_offset_seconds, common_only=True):
