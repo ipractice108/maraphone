@@ -1,0 +1,14 @@
+FROM python:3
+
+
+ENV APP /app
+
+RUN mkdir $APP
+WORKDIR $APP
+
+ADD *.py /
+ENV MARAPHONE_BOT_TOKEN="1123534002:AAEgn2VIN9O1OzyPebu6FtERsHZkKJsXO-8"
+
+RUN pip install pyTelegramBotAPI pytz schedule
+
+CMD [ "python3", "./bot.py" ]
