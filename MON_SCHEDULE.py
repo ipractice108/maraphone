@@ -60,7 +60,7 @@ def send_by_schedule():
                     elif user_time_srt == "20:00": tuesday.job_tue8(assigned_chat['id'])
                     elif user_time_srt == "21:50": tuesday.job_tue9(assigned_chat['id'])
 
-                if calendar_day == 'Wednsday':
+                if calendar_day == 'Wednesday':
                     if   user_time_srt == "06:50": wednsday.job_wed1(assigned_chat['id'])
                     elif user_time_srt == "07:00": wednsday.job_wed2(assigned_chat['id'])
                     elif user_time_srt == "07:10": wednsday.job_wed3(assigned_chat['id'])
