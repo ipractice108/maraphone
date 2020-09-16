@@ -14,7 +14,7 @@ from db import Database
 import constants
 import telebot
 import logging
-from requests.exceptions import HTTPError, ConnectionError, Timeout
+from requests.exceptions import HTTPError, ConnectionError, Timeout, ConnectTimeout
 
 logger = telebot.logger
 #logging.basicConfig(filename = "schedule.log")
@@ -128,6 +128,8 @@ def send_by_schedule():
             except HTTPError as e:
                 logger.error(e)
             except Timeout as e:
+                logger.error(e)
+            except ConnectTimeout as e:
                 logger.error(e)
             except Exception as e:
                 logger.error(e)
