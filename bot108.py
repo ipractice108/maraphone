@@ -35,8 +35,8 @@ def handle_text(message):
 
     if message.text == "/start":
         key = telebot.types.ReplyKeyboardMarkup(True, False)
-        key.row('Да сегодня понедельник и я готов!')
-        send = bot.send_message(message.chat.id, 'Здравствуйте! Начинаем марофон ipractice.club', reply_markup=key)
+        key.row('Да сегодня я начинаю!')
+        send = bot.send_message(message.chat.id, 'Здравствуй! Начинаем марофон ipractice.club', reply_markup=key)
 
     elif message.text == "Да сегодня понедельник и я готов!":
         key_remove = telebot.types.ReplyKeyboardRemove()
