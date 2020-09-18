@@ -79,7 +79,7 @@ def job_mon6(chat_id):
                                         '\n'
                                         '➡️Вечером я пришлю следующее видео с практикой.')
 
-ef job_mon66(chat_id):
+def job_mon66(chat_id):
     bot.send_message(chat_id, 'https://youtu.be/ppzhUe0eZwQ')
 
 #evening lesson
