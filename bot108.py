@@ -38,7 +38,7 @@ def handle_text(message):
         key.row('Да сегодня я начинаю!')
         send = bot.send_message(message.chat.id, 'Здравствуй! Начинаем марофон ipractice.club', reply_markup=key)
 
-    elif message.text == "Да сегодня понедельник и я готов!":
+    elif message.text == "Да сегодня я начинаю практику!":
         key_remove = telebot.types.ReplyKeyboardRemove()
         bot.send_message(message.chat.id, '🏆Этот МАРАФОН для тех кто хочет управлять своим здоровьем, сознанием и силой воли.\n'
                                           '\n'
