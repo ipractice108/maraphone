@@ -35,7 +35,7 @@ def handle_text(message):
 
     if message.text == "/start":
         key = telebot.types.ReplyKeyboardMarkup(True, False)
-        key.row('Да сегодня я начинаю!')
+        key.row('Да сегодня я начинаю практику!')
         send = bot.send_message(message.chat.id, 'Здравствуй! Начинаем марофон ipractice.club', reply_markup=key)
 
     elif message.text == "Да сегодня я начинаю практику!":
