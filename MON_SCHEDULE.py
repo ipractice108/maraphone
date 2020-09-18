@@ -63,8 +63,7 @@ def send_by_schedule():
                     elif user_time_srt == "20:00": tuesday.job_tue8(assigned_chat['id'])
                     elif user_time_srt == "21:50": tuesday.job_tue9(assigned_chat['id'])
 
-<<<<<<< HEAD
-                if calendar_day == 'Wednsday':
+                if calendar_day == 'Wednesday':
                     if   user_time_srt == "06:50": wednesday.job_wed1(assigned_chat['id'])
                     elif user_time_srt == "07:00": wednesday.job_wed2(assigned_chat['id'])
                     elif user_time_srt == "07:10": wednesday.job_wed3(assigned_chat['id'])
@@ -77,20 +76,6 @@ def send_by_schedule():
                     elif user_time_srt == "15:00": wednesday.job_wed77(assigned_chat['id'])
                     elif user_time_srt == "20:00": wednesday.job_wed8(assigned_chat['id'])
                     elif user_time_srt == "21:50": wednesday.job_wed9(assigned_chat['id'])
-=======
-                if calendar_day == 'Wednesday':
-                    if   user_time_srt == "06:50": wednsday.job_wed1(assigned_chat['id'])
-                    elif user_time_srt == "07:00": wednsday.job_wed2(assigned_chat['id'])
-                    elif user_time_srt == "07:10": wednsday.job_wed3(assigned_chat['id'])
-                    elif user_time_srt == "07:12": wednsday.job_wed33(assigned_chat['id'])
-                    elif user_time_srt == "07:15": wednsday.job_wed4(assigned_chat['id'])
-                    elif user_time_srt == "10:00": wednsday.job_wed5(assigned_chat['id'])
-                    elif user_time_srt == "12:00": wednsday.job_wed6(assigned_chat['id'])
-                    elif user_time_srt == "15:00": wednsday.job_wed7(assigned_chat['id'])
-                    elif user_time_srt == "20:00": wednsday.job_wed8(assigned_chat['id'])
-                    elif user_time_srt == "21:50": wednsday.job_wed9(assigned_chat['id'])
->>>>>>> 046e40d28fe640c521423c73cfda72081c066097
-
 
                 if calendar_day == 'Thursday':
                     if   user_time_srt == "06:50": thursday.job_thu1(assigned_chat['id'])
