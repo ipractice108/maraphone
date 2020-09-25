@@ -1,6 +1,6 @@
 import monday
 import tuesday
-import wednsday
+import wednesday
 import thursday
 import friday
 import saturday
